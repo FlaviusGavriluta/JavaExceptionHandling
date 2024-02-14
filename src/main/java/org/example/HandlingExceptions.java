@@ -10,11 +10,13 @@ public class HandlingExceptions {
             System.out.println(String.format("\nThe price at index %d is %f\n", index, prices[index]));
         } catch (Exception e) {
             System.out.println("An Exception occurred");
-            e.printStackTrace();
-            System.out.println("The Exception class: " + e.getClass());
-            System.out.println("The Exception message: " + e.getMessage());
-            System.out.println("The Exception localized message: " + e.getLocalizedMessage());
-            System.out.println("The Exception cause: " + e.getCause());
+            System.out.println("Is e an Object? " + (e instanceof Object));
+            System.out.println("Is e a Throwable? " + (e instanceof Throwable));
+            System.out.println("Is e an Exception? " + (e instanceof Exception));
+            System.out.println("Is e a RuntimeException? " + (e instanceof RuntimeException));
+            System.out.println("Is e a ArrayIndexOutOfBoundsException? " + (e instanceof ArrayIndexOutOfBoundsException));
+            System.out.println("Is e a ArithmeticException? " + (e instanceof ArithmeticException));
+            System.out.println("Is e a StringIndexOutOfBoundsException? " + (e instanceof StringIndexOutOfBoundsException));
         }
         System.out.println("End of the program");
     }
