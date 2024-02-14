@@ -6,7 +6,11 @@ public class HandlingExceptions {
         int index = 5;
 
         System.out.println("Start of the program");
-        System.out.println(String.format("\nThe price at index %d is %f\n", index, prices[index]));
+        try {
+            System.out.println(String.format("\nThe price at index %d is %f\n", index, prices[index]));
+        } catch (Exception e) {
+            System.out.println("An Exception occured: " + e);
+        }
         System.out.println("End of the program");
     }
 }
